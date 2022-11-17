@@ -21,7 +21,7 @@ function RowPost(props) {
     width: '100%',
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
-      autoplay: 0,
+      autoplay: 1,
     },
   };
   const handleMovie = (id)=>{
@@ -30,6 +30,8 @@ function RowPost(props) {
       console.log(response.data)
       if(response.data.results.length!==0){
         setId(response.data.results[0])
+      }else{
+        console.log('empty array')
       }
     
     })
